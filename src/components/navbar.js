@@ -16,7 +16,7 @@ export const Navbar = () => {
         },
         {
             name: "STORE",
-            link: "/"
+            link: "/store"
         },
         {
             name: "CONTACT",
