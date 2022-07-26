@@ -1,5 +1,7 @@
 import { Products } from "../db/products"
 import { AiOutlineSearch } from "react-icons/ai"
+import { Link } from "react-router-dom"
+import { Pcard } from "./p-card"
 export const ProductCard = () => {
     return (
         <div className="product-box">
@@ -11,18 +13,12 @@ export const ProductCard = () => {
                 </div>
             </div>
             <div className="products-grid">
-                {Products.map(({ productName, productImg, cost, rating }) => (
-                    <div className="product-card">
-                        <img src={productImg} className="product-img" />
-                        <span className="product-name">{productName}</span>
-                        <div className="product-stats">
-                            <span>Rs. {cost}</span>
-                            <div className="ratings">
-                                <div className="empty-stars"></div>
-                                <div className="full-stars" style={{ width: `${rating}%` }}></div>
-                            </div>
-                        </div>
+                {Products.map((product) => (
+                    
+                    <div key={product._id}>
+                        <Pcard {...product} />
                     </div>
+                    
                 ))}
             </div>
         </div>
