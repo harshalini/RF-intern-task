@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"
 import { Products } from "../db/products";
 import { Cart, Navbar } from "../components";
 import { MdExpandLess } from "react-icons/md"
+import { useCart } from "../context/cart-context";
 export const SingleProduct = () => {
     const { productID } = useParams();
     function getProductDetails(products, productID) {
@@ -9,6 +10,8 @@ export const SingleProduct = () => {
     }
     const foundProduct = getProductDetails(Products, productID);
     const { productName, productImg, rating, reviews, cost } = foundProduct || {};
+
+    const { cartDispatch } = useCart();
 
     const customAngle = ["Front", "Middle", "Back", "Sole"]
     const designImg = ["../../assets/black-img.jpg", "../../assets/blue-img.jpg", "../../assets/white-img.jpg"]
@@ -33,7 +36,7 @@ export const SingleProduct = () => {
                             </div>
                         </div>
                         <div className="design-grid">
-                            <div><img src={`../.${productImg}`} className="product-img" alt="image" /></div>
+                            <div><img src={`../.${productImg}`} className="product-img design-img" alt="image" /></div>
                             <div className="product-info">
                                 <span className="single-prod-name">{productName}</span>
                                 <span>By KICKUPS and you</span>
@@ -45,7 +48,7 @@ export const SingleProduct = () => {
                                 <span>Rs. {cost}/-</span>
                                 <small>Get an offer</small>
                             </div>
-                            <div><img src={`../.${productImg}`} className="product-img" alt="image" /></div>
+                            <div><img src={`../.${productImg}`} className="product-img design-img" alt="image" /></div>
                             <div className="custom-column">
                                 {customAngle.map((item) => (
                                     <div className="wrapper">
@@ -56,7 +59,7 @@ export const SingleProduct = () => {
                                                     <input type="checkbox" class="checkbox" />
                                                     <div class="option_inner">
                                                         <div class="tickmark"></div>
-                                                        <img src={image} className="product-img" alt="image" />
+                                                        <img src={image} className="product-img small-img" alt="image" />
                                                     </div>
                                                 </label>
                                             ))}
@@ -71,15 +74,25 @@ export const SingleProduct = () => {
                                                 <input type="checkbox" class="checkbox" />
                                                 <div class="option_inner">
                                                     <div class="tickmark"></div>
-                                                    <img src={image} className="product-img" alt="image" />
+                                                    <img src={image} className="product-img small-img" alt="image" />
                                                 </div>
                                             </label>
                                         ))}
                                     </div>
                                 </div>
                             </div>
-                            <div><img src={`../.${productImg}`} className="product-img" alt="image" /></div>
+                            <div><img src={`../.${productImg}`} className="product-img design-img" alt="image" /></div>
                         </div>
+                    </div>
+                    <div className="product-actions">
+                        <button className="btn share-btn">Share design</button>
+                    <button
+                        className="btn addCart-btn"
+                        onClick={() => {
+                            cartDispatch({ type: "ADD_TO_CART", payload: foundProduct })
+                        }}>
+                        Add to cart
+                    </button>
                     </div>
                 </div>
                 <div className="product-box cart-box">

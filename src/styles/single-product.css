@@ -20,8 +20,6 @@
 .single-product-heading span {
     font-size: 1.6rem;
 }
-
-
 .design-flex {
     display: flex;
 }
@@ -30,7 +28,6 @@
 .product-info {
     display: flex;
     flex-direction: column;
-
 }
 
 .single-product {
@@ -50,7 +47,7 @@
     grid-template-rows: repeat(3, 32%);
 }
 
-.design-grid .product-img {
+.design-img {
     width: 9.5rem;
     height: 8rem;
     
@@ -81,7 +78,7 @@
     font-weight: 700;
 }
 /* CHECKBOX */
-.container {
+.container, .product-actions {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -113,7 +110,7 @@
 }
 
 
-.option_inner img {
+.small-img {
     height: 35px !important;
     width: 35px !important;
     border: solid 1px var(--black);

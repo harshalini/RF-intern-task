@@ -72,11 +72,9 @@
 .filter-box, .cart-box {
     flex-basis: 22%;
 }
-
 .cart-div {
-    padding: 0 2rem;
+    padding: 0 0.5rem;
 }
-
 .product-name {
     font-size: 1.5rem;
     font-weight: 500;

@@ -9,7 +9,7 @@ export const Store = () => {
                 <div className="product-box filter-box">
                     <div className="product-nav">
                         <h2>FILTERS</h2>
-                        <FiFilter className="product-icon"/>
+                        <FiFilter className="product-icon" />
                     </div>
                     <div className="product-filters">
                         <CostFilter />
@@ -17,7 +17,6 @@ export const Store = () => {
                     </div>
                 </div>
                 <ProductCard />
-                
                 <div className="product-box cart-box">
                     <Cart />
                 </div>
