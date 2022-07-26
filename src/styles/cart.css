@@ -1,0 +1,35 @@
+/* CART */
+.cart-flex {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    border: solid 2px var(--black);
+    padding: 0.2rem 0.5rem;
+}
+.share-btn {
+    background: none;
+    margin-right: 1rem;
+}
+
+.addCart-btn {
+    background: var(--black);
+    color: var(--white);
+}
+
+.cross-btn {
+    position: absolute;
+    margin-top: -0.5rem;
+    margin-left: -0.5rem;
+    font-size: 1.2rem;
+    color: red;
+}
+.empty-cart {
+    display: flex;
+    justify-content: center;
+    margin-top: 60%;
+    align-items: center;
+}
