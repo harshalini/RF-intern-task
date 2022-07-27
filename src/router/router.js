@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom"
-import { Home, Journey, Store, SingleProduct, Team } from "../pages"
+import { Home, Journey, Store, SingleProduct, Team, Contact } from "../pages"
 
 export const AppRouter = () => {
     return (
@@ -9,6 +9,7 @@ export const AppRouter = () => {
             <Route path="store" element={<Store />} />
             <Route path="single-product/:productID" element={<SingleProduct />} />
             <Route path="/team" element={<Team />} />
+            <Route path="/contact" element={<Contact />} />
         </Routes>
     )
 }

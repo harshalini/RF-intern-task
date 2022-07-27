@@ -20,7 +20,7 @@ export const Navbar = () => {
         },
         {
             name: "CONTACT",
-            link: "/"
+            link: "/contact"
         }
     ]
     return (
