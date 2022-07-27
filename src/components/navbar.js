@@ -12,7 +12,7 @@ export const Navbar = () => {
         },
         {
             name: "TEAM",
-            link: "/"
+            link: "/team"
         },
         {
             name: "STORE",

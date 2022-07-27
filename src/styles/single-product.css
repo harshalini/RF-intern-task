@@ -78,7 +78,7 @@
     font-weight: 700;
 }
 /* CHECKBOX */
-.container, .product-actions {
+.container, .product-actions{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
