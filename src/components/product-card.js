@@ -1,8 +1,10 @@
 import { Products } from "../db/products"
 import { AiOutlineSearch } from "react-icons/ai"
-import { Link } from "react-router-dom"
 import { Pcard } from "./p-card"
+import { GetColor, GetCost, GetType } from "../utils/filter-utils"
 export const ProductCard = () => {
+    const compose = (...getNoteCard) => (note) => getNoteCard.reduce((data, getNoteCard) => getNoteCard(data), note);
+    const filteredProducts = compose(GetColor, GetType)(Products)
     return (
         <div className="product-box">
             <div className="product-nav">
@@ -13,8 +15,7 @@ export const ProductCard = () => {
                 </div>
             </div>
             <div className="products-grid">
-                {Products.map((product) => (
-                    
+                {filteredProducts.map((product) => (
                     <div key={product._id}>
                         <Pcard {...product} />
                     </div>

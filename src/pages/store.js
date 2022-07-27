@@ -1,5 +1,5 @@
 import { Navbar } from "../components"
-import { CostFilter, TypeFilter, ProductCard, Cart } from "../components"
+import { CostFilter, TypeFilter, ProductCard, Cart, ColorFilter } from "../components"
 import { FiFilter } from "react-icons/fi"
 export const Store = () => {
     return (
@@ -13,6 +13,7 @@ export const Store = () => {
                     </div>
                     <div className="product-filters">
                         <CostFilter />
+                        <ColorFilter />
                         <TypeFilter />
                     </div>
                 </div>
