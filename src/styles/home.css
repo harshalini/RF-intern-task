@@ -92,7 +92,7 @@
         color: #ECBE24;
     }
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1360px) {
     .nav-pages {
         width: 50vw;
     }

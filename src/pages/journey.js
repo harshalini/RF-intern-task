@@ -1,8 +1,7 @@
-import { Navbar, JourneyContent } from "../components"
+import { JourneyContent } from "../components"
 export const Journey = () => {
     return (
         <div>
-            
             <JourneyContent />
         </div>
     )
