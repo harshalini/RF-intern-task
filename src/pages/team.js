@@ -1,5 +1,3 @@
-import { Navbar } from "../components"
-
 export const Team = () => {
     const theTeam = [
         {
@@ -40,9 +38,9 @@ export const Team = () => {
     ]
     return (
         <div>
-            <Navbar />
+            
             <div className="center-flex team-div">
-                <p className="team-heading">Without bonding and coordination, every project is a failure. Look at who makes KICKUPS great. ;)</p>
+                <p className="team-heading">Without bonding and coordination, every project is a failure. Look at who makes KICKSUP great. ;)</p>
                 <div className="person-flex">
                     {theTeam.map(({ _id, person, name, position, connect }) => (
                         <div key={_id} className="person-info">

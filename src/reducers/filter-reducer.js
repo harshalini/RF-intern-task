@@ -7,16 +7,19 @@ export const FilterReducer = (state, action) => {
         case 'FILTER_COST':
             return { ...state, itemCost: action.payload }
         case `REMOVE_COST`:
-            return { ...state, itemCost: 0 }
+            return { ...state, itemCost: "" }
         case 'FILTER_TYPE':
             return { ...state, itemType: [...state.itemType, action.payload] }
         case `REMOVE_TYPE`:
             return { ...state, itemType: state.itemType.filter(c => c !== action.payload) }
+            case "SORT":
+                return { ...state, sortBy: action.payload };
         case "CLEAR":
             return {
                 itemColor: "",
-                itemCost: 0,
-                itemType: ""
+                itemCost: "",
+                itemType: "",
+                sortBy: ""
             };
         default:
             return state;

@@ -12,34 +12,24 @@ export const CostFilter = () => {
         <div className="cost-filter">
             <span className="filter-heading">Cost</span> <br />
             <div className="filter-div">
-                <label htmlFor="ost-input">
-                    <input className="cost-input" id="ost-input"type="checkbox" value={4000}
-                        onChange={(e) =>
-                            clickFilter(e, "COST")
-                        }
-
-                      
-
+                <label className="cursor" htmlFor="cheap-input">
+                    <input className="cost-input" id="cheap-input" type="checkbox" value="1500-to-4000"
+                        onChange={(e) => clickFilter(e, "COST")}
+                        checked={itemCost === "1500-to-4000"}
                     />
                     Rs. 1500 to 4000
                 </label>
-                <label htmlFor="c-input">
-                    <input className="cost-input" id="c-input" type="checkbox" value={7000}
-                        onChange={(e) =>
-                           clickFilter(e, "COST")
-
-                        }
-                       
+                <label className="cursor" htmlFor="mid-input">
+                    <input className="cost-input" id="mid-input" type="checkbox" value="4001-to-7000"
+                        onChange={(e) => clickFilter(e, "COST")}
+                        checked={itemCost === "4001-to-7000"}
                     />
                     Rs. 4001 to 7000
                 </label>
-                <label htmlFor="cos-input">
-                    <input className="cost-input" id="cos-input"type="checkbox" value={8000}
-                        onChange={(e) =>
-                            clickFilter(e, "COST")
-                        }
-                        
-                        
+                <label className="cursor" htmlFor="exp-input">
+                    <input className="cost-input" id="exp-input" type="checkbox" value="7001-to-10000"
+                        onChange={(e) => clickFilter(e, "COST")}
+                        checked={itemCost === "7001-to-10000"}
                     />
                     Rs. 7001+
                 </label>

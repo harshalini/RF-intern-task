@@ -1,16 +1,26 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useReducer, useState } from "react";
+import { Products } from "../db/products";
 import { FilterReducer } from "../reducers/filter-reducer";
-const sortFiltercontext = createContext();
-const FilterDataProvider = ({ children }) => {
 
-    const [state, filterDispatch] = useReducer(FilterReducer, {
+const sortFiltercontext = createContext();
+
+const FilterDataProvider = ({ children }) => {
+   const [state, filterDispatch] = useReducer(FilterReducer, {
         itemColor: "",
-        itemCost: 0,
-        itemType: ""
+        itemCost: "",
+        itemType: "",
+        sortBy: ""
     });
 
+    const [filteredProducts, setFilteredProducts] = useState(Products)
+    
     return (
-        <sortFiltercontext.Provider value={{ state, filterDispatch }}>
+        <sortFiltercontext.Provider value={{ 
+            state, 
+            filterDispatch, 
+            filteredProducts, 
+            setFilteredProducts
+        }}>
             {children}
         </sortFiltercontext.Provider>
     );
