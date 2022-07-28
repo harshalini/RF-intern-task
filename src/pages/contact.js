@@ -3,7 +3,7 @@ import { Navbar } from "../components"
 export const Contact = () => {
     return (
         <div>
-            <Navbar />
+            
             <div className="contact-div">
                 <h2>REACH US AT</h2>
                 <div className="contact-flex">
